@@ -18,7 +18,7 @@ export default function Routes() {
             <Route path="/profile" component={Profile} isPrivate />
 
             {/* redirecionar rota não existente
-            <Route path="/" component={() => <h1>404</h1>} />*/}
+            <Route path="/" component={() => <h1>404</h1>} /> */}
         </Switch>
     );
 }
