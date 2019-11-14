@@ -9,11 +9,7 @@ export function* updateProfile({ payload }) {
     try {
         const { name, email, avatar_id, ...rest } = payload.data;
 
-        // const profile = Object.assign({ name, email }, rest.oldPassword ? rest : {});
-        const profile = Object.assign(
-            { name, email, avatar_id },
-            rest.oldPassword ? rest : {}
-        );
+        const profile = Object.assign({ name, email, avatar_id }, rest.oldPassword ? rest : {});  //eslint-disable-line
 
         const response = yield call(api.put, 'users', profile);
 
